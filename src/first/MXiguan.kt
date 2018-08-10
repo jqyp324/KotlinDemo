@@ -49,6 +49,25 @@ fun main(args: Array<String>) {
     val email = data["email"] ?: throw IllegalStateException("Email is missing!")
 
     println(arrOfMinusOnes(3).javaClass)
+
+    val paintPic = PaintPic()
+//    paintPic.drawPic("my pic")
+    with(paintPic){
+        setSize()
+        for (i in 1..3)
+            drawPic("is $i")
+    }
+
+    val asc = Array(5, {i -> (i * i).toString() })
+    println(asc.javaClass)
+    for (item in asc)
+        println("asc==$item")
+
+
+    val text = """for (c in "for")
+                    print(c)
+               """
+    println(text)
 }
 
 data class Customer(val name:String,val agent: Int,var birthday:String)
@@ -60,4 +79,13 @@ fun String.spaceAdd1(){
 }
 fun arrOfMinusOnes(size: Int): IntArray{
 	return IntArray(size).apply{ fill(-1) }
+}
+
+class PaintPic{
+    fun setSize(){
+        println("set size")
+    }
+    fun drawPic(pic:String){
+        println("drawPic:$pic")
+    }
 }
