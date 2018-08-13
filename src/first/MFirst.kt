@@ -5,7 +5,6 @@ package first
  * http://www.kotlindoc.cn/GettingStarted/Basic-Syntax.html
  */
 
-
 fun main(args: Array<String>) {
     println("==========")
     println(sum(5, 6))
