@@ -1,5 +1,7 @@
 package first
 
+
+import kotlin.properties.Delegates
 import kotlin.reflect.KProperty
 
 fun main(args: Array<String>) {
@@ -12,7 +14,26 @@ fun main(args: Array<String>) {
     myExample.myvar = "yupeng"
     println(myExample.myvar)
 
+//    Delegates.observable("")
+//    var name: String by Delegates.observable("<no name>") {
+//        d.old,new -> println("$old -> $new")
+//    }
+
+
+
 }
+
+
+//class User(val map: Map<String, Any?>) {
+//    val name: String by Delegates.mapVal(map)
+//    val age: Int     by Delegates.mapVal(map)
+//}
+
+//class User {
+//    var name: String by Delegates.observable("<no name>") {
+//        d.old,new -> println("$old -> $new")
+//    }
+//}
 
 interface ProxyBase{
     fun print()
