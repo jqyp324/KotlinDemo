@@ -24,6 +24,7 @@ fun main(args: Array<String>) {
 
     val sum2 = fun Int.(other:Int) :Int = other * this
     println(2.sum2(2))
+//    println(2 sum2 5)
 
 }
 
