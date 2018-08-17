@@ -3,8 +3,8 @@ package first
 fun main(args: Array<String>) {
     println("===高阶函数===")
     var ints = listOf(1, 2, 3, 4)
-//    val doubled = ints.map(::argAdd)
-    val doubled = ints.map { i, j -> i * j * 2 }
+    val doubled = ints.map(::argAdd)
+//    val doubled = ints.map { i, j -> i * j * 2 }
     println(doubled)
 
     val ss = { x: Int, y: Int -> x * y }//函数文本语法
