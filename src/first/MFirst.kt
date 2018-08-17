@@ -60,6 +60,12 @@ fun main(args: Array<String>) {
         "d" in mySet -> println("d is not in my set")
     }
 
+    val yStr: String? = null
+//    val xStr:String? = yStr
+    val xStr:String? = yStr as? String
+    println(xStr)
+
+
 }
 
 fun sum(a: Int, b: Int) = a + b
